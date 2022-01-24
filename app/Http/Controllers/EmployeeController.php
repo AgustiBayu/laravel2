@@ -17,8 +17,12 @@ class EmployeeController extends Controller
     }
 
     public function insertdata(Request $request) {
-      //  dd($request->all());
-        Employee::create($request->all());
+        $data = Employee::create($request->all());
+        if($request->hasFile('poto')) {
+            $request->file('poto')->move('potopegawai/', $request->file('poto')->getClientOriginalName());
+            $data->poto = $request->file('poto')->getClientOriginalName();
+            $data->save();
+        }
         return redirect()->route('pegawai')->with('success',' Data Berhasil di Inputkan');
     }
 

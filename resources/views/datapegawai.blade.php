@@ -26,6 +26,7 @@
                   <tr>
                     <th scope="col">No</th>
                     <th scope="col">Nama</th>
+                    <th scope="col">poto</th>
                     <th scope="col">Jenis Kelamain</th>
                     <th scope="col">No Telepon</th>
                     <th scope="col">Dibuat</th>
@@ -40,6 +41,9 @@
                     <tr>
                         <th scope="row">{{ $no++ }}</th>
                         <td>{{ $row->nama }}</td>
+                        <td>
+                            <img src="{{ asset('potopegawai/'.$row->poto) }}" alt="" style="width: 40px;">
+                        </td>
                         <td>{{ $row->jeniskelamin }}</td>
                         <td>{{ $row->notelepon }}</td>
                         <td>{{ $row->created_at->format('D M Y')}}</td>

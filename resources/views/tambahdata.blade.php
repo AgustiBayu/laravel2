@@ -36,7 +36,11 @@
                           <div class="mb-3">
                             <label for="exampleInputEmail1" class="form-label">No Telepon</label>
                             <input type="text" name = "notelepon" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+                          </div>
 
+                          <div class="mb-3">
+                            <label for="exampleInputEmail1" class="form-label">Masukan Foto</label>
+                            <input type="file" name = "poto" class="form-control">
                           </div>
                           <button type="submit" class="btn btn-primary">Submit</button>
                       </form>
