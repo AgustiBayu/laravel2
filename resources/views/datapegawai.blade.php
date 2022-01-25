@@ -16,12 +16,19 @@
 
     <div class="container">
         <a href="/tambahpegawai" class="btn btn-success">Tambah</a>
+        <div class="row g-3 align-items-center mt-2">
+            <div class="col-auto">
+            <form action="/pegawai" method="GET">
+              <input type="search" id="inputPassword6" name = "search" class="form-control" aria-describedby="passwordHelpInline">
+            </form>
+            </div>
+          </div>
         <div class="row">
-            @if ($message = Session::get('success'))
+            {{-- @if ($message = Session::get('success'))
             <div class="alert alert-success" role="alert">
                 {{ $message }}
               </div>
-            @endif
+            @endif --}}
 
             <table class="table">
                 <thead>
