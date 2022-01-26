@@ -27,3 +27,5 @@ Route::get('/tampilkandata/{id}',[EmployeeController::class, 'tampilkandata'])->
 Route::post('/updatedata/{id}',[EmployeeController::class, 'updatedata'])->name('updatedata');
 
 Route::get('/delete/{id}',[EmployeeController::class, 'delete'])->name('delete');
+
+Route::get('/exportpdf',[EmployeeController::class, 'exportpdf'])->name('exportpdf');

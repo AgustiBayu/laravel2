@@ -22,7 +22,10 @@
               <input type="search" id="inputPassword6" name = "search" class="form-control" aria-describedby="passwordHelpInline">
             </form>
             </div>
-          </div>
+            <div class="col-auto">
+                <a href="/exportpdf" class="btn btn-info">Export to pdf</a>
+             </div>
+        </div>
         <div class="row">
             {{-- @if ($message = Session::get('success'))
             <div class="alert alert-success" role="alert">
