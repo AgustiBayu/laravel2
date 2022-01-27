@@ -58,7 +58,7 @@
                         </td>
                         <td>{{ $row->jeniskelamin }}</td>
                         <td>{{ $row->notelepon }}</td>
-                        <td>{{ $row->created_at->format('D M Y')}}</td>
+                        <td>{{ $row->created_at->format('d/m/Y')}}</td>
                         <td>
                         <a href="/tampilkandata/{{ $row->id }}" class="btn btn-warning">Edit</a>
                         <a href="#" class="btn btn-danger delete" data-id="{{ $row->id }}" data-nama="{{ $row->nama }}">Delete</a>
