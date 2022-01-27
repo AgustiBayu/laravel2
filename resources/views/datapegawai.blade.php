@@ -19,7 +19,7 @@
         <div class="row g-3 align-items-center mt-2">
             <div class="col-auto">
             <form action="/pegawai" method="GET">
-              <input type="search" id="inputPassword6" name = "search" class="form-control" aria-describedby="passwordHelpInline">
+              <input type="search" id="inputPassword6" placeholder="search by nama/notlp" name = "search" class="form-control" aria-describedby="passwordHelpInline">
             </form>
             </div>
             <div class="col-auto">
