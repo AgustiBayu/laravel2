@@ -10,8 +10,8 @@ class EmployeeController extends Controller
 {
     public function index(Request $request) {
         if ($request->has('search')) {
-            $data = Employee::where('nama','LIKE','%'.$request->search.'%')
-            ->orWhere('notelepon', 'LIKE', '%' . $request->search . '%')
+            $data = Employee::where('nama','ILIKE','%'.$request->search.'%')
+            ->orWhere('notelepon', 'ILIKE', '%' . $request->search . '%')
             ->paginate(5); //multiple pencarian 2 kolom atau lebih nama dan telepon
         } else {
             $data = Employee::paginate(5); // eloquent select * from Employee
