@@ -24,6 +24,12 @@ class EmployeeController extends Controller
     }
 
     public function insertdata(Request $request) {
+
+        $this->validate($request, [
+            'nama' => 'required|min:7|max:20',
+            'notelepon' => 'required|min:10|max:12',
+        ]);
+
         $data = Employee::create($request->all());
         if($request->hasFile('poto')) {
             $request->file('poto')->move('potopegawai/', $request->file('poto')->getClientOriginalName());
